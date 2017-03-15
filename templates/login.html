@@ -1,0 +1,20 @@
+<div class="login-content">
+	<h4>Welcome</h4>
+	<h5>Login or register for free!</h5>
+	<ul>
+		<li>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Name" ng-model="user.name">
+		  </label>
+		</li>
+		<li>
+		  <label class="item item-input">
+		    <input type="password" placeholder="Password" ng-model="user.password">
+		  </label>
+		</li>
+		<li>
+		  <button ng-click="login()">Login</button>
+			<button ui-sref="outside.register">Register now!</button>
+		</li>
+	</ul>
+</div>

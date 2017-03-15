@@ -1,0 +1,16 @@
+{
+  "name": "nutri",
+  "version": "0.0.0",
+  "description": " ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"angular": "1.5.9",
+  	"angular-ui-router": "^0.3.2",
+  	"angular-resource": "1.6.1"
+  },
+  "author": "Santiago Botta",
+  "license": "ISC"
+}
