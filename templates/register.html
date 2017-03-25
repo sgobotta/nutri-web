@@ -1,9 +1,22 @@
 <div class="list">
-  <label class="item item-input">
-    <input type="text" placeholder="Name" ng-model="user.name">
-  </label>
-  <label class="item item-input">
-    <input type="password" placeholder="Password" ng-model="user.password">
-  </label>
+	<ul>
+		<li>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Email" ng-model="user.email">
+		  </label>
+	  </li>
+	  <li>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Name" ng-model="user.name">
+		  </label>
+		</li>
+		<li>
+		  <label class="item item-input">
+		    <input type="password" placeholder="Password" ng-model="user.password">
+		  </label>
+		</li>
+		<li>
+			<button class="button button-full button-positive" ng-click="signup()">Sign up</button>
+		</li>
+	</ul>
 </div>
-<button class="button button-full button-positive" ng-click="signup()">Sign up</button>

@@ -1,3 +1,4 @@
+
 var app = angular.module('starter', ['ui.router']);
 
  
@@ -19,6 +20,16 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: '../templates/register.html',
     controller: 'RegisterCtrl'
   })
+  .state('outside.recover', {
+    url: '/recover',
+    templateUrl: '../templates/recover.html',
+    controller: 'RecoverCtrl'
+  })
+  .state('outside.reset', {
+    url: '/reset/:token',
+    templateUrl: '../templates/reset.html',
+    controller: 'ResetCtrl'
+  })
   .state('inside', {
     url: '/inside',
     templateUrl: '../templates/inside.html',
@@ -31,9 +42,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 app.run(function($rootScope, $state, AuthService, AUTH_EVENTS) {
   $rootScope.$on('$stateChangeStart', function(event, next, nextParams, fromState) {
     if(!AuthService.isAuthenticated()) {
-      if(next.name !== 'outside.login' && next.name !== 'outside.register') {
+      if(next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'outside.recover' && next.name !== 'outside.reset') {
         console.log("going outside")
-        event.preventDefault();
+        /*event.preventDefault();*/
         $state.go('outside.login');
       }
     }

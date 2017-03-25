@@ -33,27 +33,6 @@ angular.module('starter')
     window.localStorage.removeItem(LOCAL_TOKEN_KEY);
   }
 
-/*  var register = function(user) {
-    console.log(user)
-    return $q(function(resolve, reject) {
-      console.log("lala")
-      $http({
-        method: 'POST',
-        url: API_ENDPOINT.url + '/signup',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        data: user
-      }).then(function(result){
-        console.log("after promise");
-        if(result.data.success) {
-          resolve(result.data.msg)
-        }
-        else {
-          reject(result.data.msg)
-        }
-      })
-    });
-  };*/
-
   var register = function(user) {
     console.log(user)
     return $q(function(resolve, reject) {
@@ -66,13 +45,12 @@ angular.module('starter')
         }
       });
     });
-  };
+  }
 
- 
   var login = function(user) {
     return $q(function(resolve, reject) {
       $http.post(API_ENDPOINT.url + '/authenticate', user).then(function(result) {
-        if (result.data.success) {
+        if(result.data.success) {
           storeUserCredentials(result.data.token);
           resolve(result.data.msg);
         } else {
@@ -80,7 +58,44 @@ angular.module('starter')
         }
       });
     });
-  };
+  }
+
+  var resetPasswordGet = function(token) {
+    return $q(function(resolve, reject) {
+      $http.get(API_ENDPOINT.url + '/reset/' + token).then(function(result){
+        if(result.data.success){
+          resolve(result.data.msg)
+        } else {
+          reject(result.data.msg)
+        }
+      })
+    })
+  }
+
+  var resetPasswordPost = function(user) {
+    return $q(function(resolve, reject) {
+      $http.post(API_ENDPOINT.url + '/reset', { user: user }).then(function(result) {
+        if(result.data.success) {
+          resolve(result.data.msg)
+        } else {
+          reject(result.data.msg)
+        }
+      })
+    })
+  }
+
+
+  var recover = function(email) {
+    return $q(function(resolve, reject){
+      $http.post(API_ENDPOINT.url + '/recover', email).then(function(result){
+        if(result.data.success){
+          resolve(result.data.msg);
+        } else {
+          reject(result.data.msg)
+        }
+      });
+    });
+  }
  
   var logout = function() {
     destroyUserCredentials();
@@ -92,6 +107,9 @@ angular.module('starter')
     login: login,
     register: register,
     logout: logout,
+    recover: recover,
+    resetPasswordGet: resetPasswordGet,
+    resetPasswordPost: resetPasswordPost,
     isAuthenticated: function() {return isAuthenticated;},
   };
 })
@@ -104,9 +122,9 @@ angular.module('starter')
       }[response.status], response);
       return $q.reject(response);
     }
-  };
+  }
 })
  
 .config(function ($httpProvider) {
   $httpProvider.interceptors.push('AuthInterceptor');
-});
+})
