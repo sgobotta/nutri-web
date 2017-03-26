@@ -30,10 +30,29 @@ angular.module('starter')
   $scope.signup = function() {
     console.log("in sign up")
     AuthService.register($scope.user).then(function(msg) {
-      $state.go('outside.login');
       alert("Register Success! " + msg)
+      $state.go('outside.login');
     }, function(errMsg) {
       alert("Register failed! " + errMsg)
+    });
+  }
+
+})
+
+
+.controller('RecoverCtrl', function($scope, AuthService, $state) {
+
+  $scope.user = {
+    mail: ''
+  }
+
+  $scope.recover = function() {
+    AuthService.recover($scope.user).then(function(msg) {
+      alert(msg)
+      $state.go('outside.login');
+    }, function(errMsg) {
+      alert(errMsg)
+      $state.go('outside.login');
     });
   }
 
@@ -45,8 +64,9 @@ angular.module('starter')
   AuthService.resetPasswordGet($stateParams.token).then(function(msg){
     alert(msg)
   }, function(errMsg){
-    $state.go('outside.recover')
     alert(errMsg)
+    $state.go('outside.recover')
+    return
   })
 
   $scope.user = {
@@ -56,28 +76,12 @@ angular.module('starter')
 
   $scope.resetPassword = function() {
     AuthService.resetPasswordPost($scope.user).then(function(msg) {
-      $state.go('outside.login');
       alert(msg)
+      $state.go('outside.login');
     }, function(errMsg){
       alert(errMsg)
+      $state.go('outside.recover');
     })
-  }
-
-})
-
-.controller('RecoverCtrl', function($scope, AuthService, $state) {
-
-  $scope.user = {
-    mail: ''
-  }
-
-  $scope.recover = function() {
-    AuthService.recover($scope.user).then(function(msg) {
-      $state.go('outside.login');
-      alert(msg)
-    }, function(errMsg) {
-      alert(errMsg)
-    });
   }
 
 })

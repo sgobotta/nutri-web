@@ -1,3 +1,4 @@
+
 angular.module('starter')
  
 .service('AuthService', function($q, $http, API_ENDPOINT) {
@@ -19,11 +20,8 @@ angular.module('starter')
  
   function useCredentials(token) {
     isAuthenticated = true;
-    authToken = token;
- 
     // Set the token as header for your requests!
-    console.log(authToken)
-    $http.defaults.headers.common.Authorization = authToken;
+    $http.defaults.headers.common.Authorization = token;
   }
  
   function destroyUserCredentials() {
