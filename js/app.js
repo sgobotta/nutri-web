@@ -10,6 +10,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     abstract: true,
     templateUrl: '../templates/outside.html'
   })
+  .state('outside.home', {
+    url: '/home',
+    templateUrl: '../templates/home.html',
+    controller: 'HomeCtrl'
+  })
   .state('outside.login', {
     url: '/login',
     templateUrl: '../templates/login.html',
@@ -36,16 +41,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     controller: 'InsideCtrl'
   });
  
-  $urlRouterProvider.otherwise('/outside/login');
+  $urlRouterProvider.otherwise('/outside/home');
 }])
  
 app.run(function($rootScope, $state, AuthService, AUTH_EVENTS) {
   $rootScope.$on('$stateChangeStart', function(event, next, nextParams, fromState) {
     if(!AuthService.isAuthenticated()) {
-      if(next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'outside.recover' && next.name !== 'outside.reset') {
-        console.log("going outside")
-        /*event.preventDefault();*/
-        $state.go('outside.login');
+      
+      //refactor pls
+      if(next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'outside.recover' && next.name !== 'outside.reset' && next.name !== 'outside.home') {
+        event.preventDefault();
+        $state.go('outside.home');
       }
     }
   });

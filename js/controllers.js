@@ -1,6 +1,11 @@
 
 angular.module('starter')
  
+.controller('HomeCtrl', function(){
+
+
+})
+
 .controller('LoginCtrl', function($scope, AuthService, $state, $stateParams) {
 
   $scope.user = {

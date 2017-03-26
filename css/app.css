@@ -1,6 +1,6 @@
 
 .outside-content {
-	margin-top:-8px;
+	margin-top:-20px;
 	position: absolute;
   left: 0;
   width: 100%;
@@ -8,16 +8,23 @@
 	background-image: url(http://127.0.0.1:8082/static/img/wood_bk.jpg);
 }
 
-
-.login-signup {
-	width: 400px;
-	height: 280px;
-	background: rgba(255,255,255,0.2);
+.welcome-area {
+	width: 500px;
+	height: 450px;
+	background: rgba(239,239,239,0.85);
 	position:fixed;
 	right:200px;
 	bottom:130px;
 	-moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+}
+
+.home-content {
+	padding: 20px 20px 20px 20px;
+}
+
+.home-button-group {
+
 }
 
 .login-content {
