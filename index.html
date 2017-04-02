@@ -8,13 +8,12 @@
 
 	<title>| Marina N. Vazquez Nutrición |</title>
 
+	<link rel="icon" type="image/png" href="http://127.0.0.1:8082/static/img/favicon.png">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
-
-	
 
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
 	<script type="text/javascript" src="node_modules/angular-resource/angular-resource.js"></script>
@@ -28,9 +27,18 @@
 	<script type="text/javascript" src="js/directives.js"></script>
 
 </head>
-<body ng-app="starter" ng-controller="AppCtrl">
+<body ng-app="App" ng-controller="AppCtrl">
 
-	<div ui-view></div>
+	<div class="btn-group welcome-language">
+		<button type="button" class="btn btn-default" ng-click="chooseLanguage('es')">
+			<span>ES</span>
+		</button>
+		<button type="button" class="btn btn-default" ng-click="chooseLanguage('en')">
+			<span>EN</span>
+		</button>
+	</div>
+
+	<div class="ui-content" ui-view></div>
 	<div footer></div>
 
 </body>

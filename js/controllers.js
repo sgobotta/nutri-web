@@ -1,7 +1,7 @@
 
-angular.module('starter')
+angular.module('App')
 
-.controller('WelcomeCtrl', function($scope){
+.controller('WelcomeCtrl', function($scope, $state, $stateParams){
 
 })
  
@@ -117,7 +117,34 @@ angular.module('starter')
 })
 
 
-.controller('AppCtrl', function($scope, $state, AuthService, AUTH_EVENTS) {
+.controller('AppCtrl', function($rootScope, $scope, $state, $window, AuthService, AUTH_EVENTS) {
+
+/*  var defaultlang = ($window.navigator.language).slice(0,2)
+*/
+  /* Sets browser language as default
+   */
+/*  if($scope.userLanguage === null){
+    lang = $window.navigator.language || $window.navigator.userLanguage;
+    lang = lang.slice(0,2)
+    $scope.userLanguage = lang
+  } else {
+    lang = $scope.userLanguage
+  }*/
+
+  $scope.chooseLanguage = function(language){
+    $state.params.language = language
+    $state.transitionTo($state.current, $state.params, { 
+      reload: true, inherit: true, notify: true
+    });
+  }
+
+  $scope.enter = function(language){
+    /*$state.params.language = language*/
+    $state.go('outside.home', {
+      language: language
+    })
+  }
+
 
   $scope.$on(AUTH_EVENTS.notAuthenticated, function(event) {
     AuthService.logout()

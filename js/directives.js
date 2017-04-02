@@ -1,10 +1,14 @@
-angular.module('starter')
+angular.module('App')
 
 .directive('footer', function(){
 	return {
 		restrict: 'A',
-		templateUrl: '../templates/footer.html'
-	}
+		templateUrl: '../templates/es/footer.html'
+		/*lang: ['stateParams', function($stateParams){
+				console.log("lang")
+				return $stateParams.language
+			}]*/
+	  }
 })
 
 .directive('loginTemplate', function(){

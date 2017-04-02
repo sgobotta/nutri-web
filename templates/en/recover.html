@@ -1,0 +1,47 @@
+<!-- <title>Nutri - Password Recovery</title>
+
+<div class="recover-content">
+	<h3>An e-mail will be sent to the specified address in order to reset your password</h3>
+	<ul>
+		<li>
+			<input type="text" placeholder="Email" ng-model="user.email">
+		</li>
+		<li>
+			<button class="button button-full button-positive" ng-click="recover()">Send</button>
+		</li>
+	</ul>
+</div> -->
+
+
+<!-- FORGOT PASSWORD FORM -->
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">recuperación de contraseña</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form id="forgot-password-form" class="text-left">
+			<div class="etc-login-form">
+				<p>Utiliza el correo con el que te has registrado para completar el formulario. Las instrucciones para
+				completar el cambio de tu contraseña serán enviadas allí.</p>
+			</div>
+			<div class="login-form-main-message"></div>
+
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="fp_email" class="sr-only">Dirección de Mail</label>
+						<input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email" ng-model="user.email">
+					</div>
+				</div>
+				<button type="submit" class="login-button" ng-click="recover()""><i class="fa fa-chevron-right"></i></button>
+			</div>
+
+			<div class="etc-login-form">
+				<p>recordé mi contraseña: <a ui-sref="outside.login">acceder</a></p>
+				<p>ir a <a ui-sref="outside.register">registro</a></p>
+				<p>volver a <a ui-sref="outside.home">inicio</a></p>
+			</div>
+
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>

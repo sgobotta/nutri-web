@@ -1,22 +1,49 @@
-
+html, body {
+	font-family: 'Varela Round';
+}
 /* INDEX
  */
 .outside-content {
-	margin-top:-20px;
 	position: absolute;
-  left: 0;
   width: 100%;
   height: 100%;
 	background-image: rgb(255,255,255);
 }
 
+.ui-content {
+	position: relative;
+	top:30px;
+}
+
 /* WELCOME
  */
+.welcome-language {
+ 	float: right;
+ 	clear: right;
+ 	margin-top: -10px
+ }
+.welcome-content {
+	position:relative;
+	top:30px;
+ }
+.welcome-title p {
+	font-size: 20px
+}
+.welcome-services p {
+	font-size: 27px
+}
+.welcome-button button {
+	width: 100px;
+	height: 50px
+}
+.img-logo-td {
+	height: 320px;
+	width: 320px
+}
 .footer-sponsor {
 	margin-left: -20px;
 	position: fixed;
 	bottom:0;
-	
 	width: 100%
 }
 .footer-sponsor div.footer-top {
@@ -45,11 +72,6 @@
  */
 .home {
 
-}
-.img-logo-td {
-	margin-top:160px;
-	height: 280px;
-	width: 280px
 }
 
 

@@ -1,9 +1,15 @@
 
-var app = angular.module('starter', ['ui.router']);
+var app = angular.module('App', ['ui.router']);
 
- 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
- 
+
+/*  var params = {
+    resolvelang: ['$stateParams', function($stateParams){
+      return $stateParams.language
+    }],
+  }*/
+
+
   $stateProvider
   .state('outside', {
     url: '/outside',
@@ -11,13 +17,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: '../templates/outside.html'
   })
   .state('outside.welcome', {
-    url: '/welcome',
-    templateUrl: '../templates/welcome.html',
+    url: '/:language/welcome',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/welcome.html'},
     controller: 'WelcomeCtrl'
   })
   .state('outside.home', {
-    url: '/home',
-    templateUrl: '../templates/home.html',
+    url: '/:language/home',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/home.html'},
     controller: 'HomeCtrl'
   })
   .state('outside.login', {
@@ -45,8 +51,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: '../templates/inside.html',
     controller: 'InsideCtrl'
   });
- 
-  $urlRouterProvider.otherwise('/outside/welcome');
+
+  $urlRouterProvider.otherwise('/outside/es/welcome');
+
 }])
  
 app.run(function($rootScope, $state, AuthService, AUTH_EVENTS) {
