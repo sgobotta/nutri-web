@@ -1,12 +1,57 @@
 
+/* INDEX
+ */
 .outside-content {
 	margin-top:-20px;
 	position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
-	background-image: url(http://127.0.0.1:8082/static/img/wood_bk.jpg);
+	background-image: rgb(255,255,255);
 }
+
+/* WELCOME
+ */
+.footer-sponsor {
+	margin-left: -20px;
+	position: fixed;
+	bottom:0;
+	
+	width: 100%
+}
+.footer-sponsor div.footer-top {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top: 2px solid rgb(0,0,0);
+	border-bottom: 5px solid #FFFFFF;
+}
+.footer-sponsor div.footer-bottom {
+	border-bottom: 5px solid rgb(255,255,255);	
+}
+.footer-sponsor div.footer-box {
+	background: rgb(255,255,255);
+}
+.img-sponsor {
+	height: 60px;
+}
+.img-sponsor-left-fix {
+	margin-left: -40px;
+}
+.img-sponsor-right-fix {
+	margin-left: 30px;
+}
+
+/* HOME
+ */
+.home {
+
+}
+.img-logo-td {
+	margin-top:160px;
+	height: 280px;
+	width: 280px
+}
+
 
 .welcome-area {
 	width: 500px;

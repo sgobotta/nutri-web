@@ -1,5 +1,9 @@
 
 angular.module('starter')
+
+.controller('WelcomeCtrl', function($scope){
+
+})
  
 .controller('HomeCtrl', function(){
 

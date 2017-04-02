@@ -10,6 +10,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     abstract: true,
     templateUrl: '../templates/outside.html'
   })
+  .state('outside.welcome', {
+    url: '/welcome',
+    templateUrl: '../templates/welcome.html',
+    controller: 'WelcomeCtrl'
+  })
   .state('outside.home', {
     url: '/home',
     templateUrl: '../templates/home.html',
@@ -41,7 +46,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     controller: 'InsideCtrl'
   });
  
-  $urlRouterProvider.otherwise('/outside/home');
+  $urlRouterProvider.otherwise('/outside/welcome');
 }])
  
 app.run(function($rootScope, $state, AuthService, AUTH_EVENTS) {
@@ -50,7 +55,7 @@ app.run(function($rootScope, $state, AuthService, AUTH_EVENTS) {
       var state = next.name
       if(!state.startsWith('outside.')) {
         event.preventDefault();
-        $state.go('outside.home');
+        $state.go('outside.welcome');
       }
     }
   });
