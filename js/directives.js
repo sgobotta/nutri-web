@@ -1,13 +1,16 @@
 angular.module('App')
 
+.directive('header', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/header.html'
+	}
+})
+
 .directive('footer', function(){
 	return {
 		restrict: 'A',
 		templateUrl: '../templates/es/footer.html'
-		/*lang: ['stateParams', function($stateParams){
-				console.log("lang")
-				return $stateParams.language
-			}]*/
 	  }
 })
 
