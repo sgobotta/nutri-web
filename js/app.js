@@ -47,9 +47,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 app.run(function($rootScope, $state, AuthService, AUTH_EVENTS) {
   $rootScope.$on('$stateChangeStart', function(event, next, nextParams, fromState) {
     if(!AuthService.isAuthenticated()) {
-      
-      //refactor pls
-      if(next.name !== 'outside.login' && next.name !== 'outside.register' && next.name !== 'outside.recover' && next.name !== 'outside.reset' && next.name !== 'outside.home') {
+      var state = next.name
+      if(!state.startsWith('outside.')) {
         event.preventDefault();
         $state.go('outside.home');
       }
