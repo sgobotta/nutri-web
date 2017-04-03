@@ -1,9 +1,9 @@
 angular.module('App')
 
-.directive('header', function(){
+.directive('language', function(){
 	return {
 		restrict: 'A',
-		templateUrl: '../templates/header.html'
+		templateUrl: '../templates/language.html'
 	}
 })
 
@@ -12,6 +12,20 @@ angular.module('App')
 		restrict: 'A',
 		templateUrl: '../templates/es/footer.html'
 	  }
+})
+
+.directive('mnvHeaderEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/header.html'
+	}
+})
+
+.directive('mnvHeaderEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/header.html'
+	}
 })
 
 .directive('loginTemplate', function(){

@@ -9,22 +9,33 @@ html, body {
   height: 100%;
 	background-image: rgb(255,255,255);
 }
-
 .ui-content {
 	position: relative;
-	top:30px;
+}
+
+/* HEADER
+ */
+.header-mnv p.name {
+	font-size: 20px;
+}
+.header-mnv p.legend {
+	padding-left: 40px;
+	font-size: 18px;
 }
 
 /* WELCOME
  */
-.welcome-language {
+div.header-mnv {
+	
+}
+.header-language {
  	float: right;
  	clear: right;
  	margin-top: -10px
  }
 .welcome-content {
 	position:relative;
-	top:30px;
+	top:0px;
  }
 .welcome-title p {
 	font-size: 20px
@@ -40,6 +51,9 @@ html, body {
 	height: 320px;
 	width: 320px
 }
+
+/* HEADER
+ */
 .footer-sponsor {
 	margin-left: -20px;
 	position: fixed;
@@ -68,11 +82,8 @@ html, body {
 	margin-left: 30px;
 }
 
-/* HOME
- */
-.home {
 
-}
+
 
 
 .welcome-area {
