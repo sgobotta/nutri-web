@@ -26,14 +26,17 @@ html, body {
 /* HEADER
  */
 div.header-mnv {
-	
+
 }
 .header-mnv p.name {
+	font-weight: bold;
 	font-size: 20px;
 }
 .header-mnv p.legend {
-	padding-left: 40px;
-	font-size: 18px;
+	font-weight: bold;
+	padding-left: 64px;
+	margin-top: -16px;
+	font-size: 14px;
 }
 
 /* WELCOME
@@ -56,7 +59,7 @@ div.header-mnv {
 	width: 320px
 }
 
-/* HEADER
+/* FOOTER
  */
 .footer-sponsor {
 	margin-left: -20px;
@@ -86,10 +89,46 @@ div.header-mnv {
 	margin-left: 30px;
 }
 
+/* HOME
+ */
+.home-content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.daily-recipe {
+	border: solid black 1px;
+	padding: 5px 5px 5px 5px;
+}
+.daily-recipe a img {
+	
+}
+.home-welcome p.home-welcome-title {
+	font-weight: bold;
+	font-size: 36px;
+}
+.home-welcome div.home-welcome-text p {
+	font-size: 26px;
+}
+.custom-bullet li {
+	font-size: 18px;
+  display: block;
+}
+.custom-bullet li:before {
+  /*Using a Bootstrap glyphicon as the bullet point*/
+  content:"\e013";
+  font-family: 'Glyphicons Halflings';
+  font-size: 18px;
+  margin-top: 4px;
+  margin-left: -17px;
+  margin-right: 4px;
+  color: #00FF00;
+}
 
 
 
 
+/* NO SE USA, ES DEL LOGIN VIEJO, REUTILIZAR O BORRAR */
 .welcome-area {
 	width: 500px;
 	height: 450px;
