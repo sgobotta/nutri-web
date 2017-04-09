@@ -28,6 +28,16 @@ angular.module('App')
 	}
 })
 
+.directive('serviceAlimentaryPlanEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/alimentary_plan.html'
+	}
+})
+
+
+
+
 .directive('loginTemplate', function(){
 	return {
 		restrict: 'A',

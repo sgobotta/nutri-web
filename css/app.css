@@ -168,12 +168,14 @@ div.header-mnv {
   margin-right: 7px;
   color: #00FF00;
 }
-.services-face-to-face-items button, .services-online-items button {
+.bullet-button {
 	margin-left: -10px;
 	margin-right: -10px;
 	background: rgba(255,255,255,0);
 	color: rgba(255,255,255,0);
 	border: 0px;
+}
+.services-face-to-face-items button, .services-online-items button {
 	transition: all ease-in-out 800ms;
 }
 #ftf_1:hover > #ftf_1-0, #ftf_2:hover > #ftf_2-0, #ftf_3:hover > #ftf_3-0, 
@@ -205,7 +207,7 @@ div.header-mnv {
 	font-size: 18px;
 }
 .services-description {
-	padding-left: 30px;
+	padding-left: 40px;
 	font-size: 16px;
 }
 /* Services Icons */
@@ -222,15 +224,18 @@ p.services-ftf-icon, p.services-online-icon {
   margin-right: 7px;
 }
 /* Services Bullets */
-p.services-bullet-check:after {
+button.services-bullet-check:after {
 	content:"\e089";
 	color: #00FF00;
 }
-p.services-bullet-cross:after {
+button.services-bullet-cross:after {
 	content:"\e088";
 	color: #FF0000;
 }
-p.services-bullet-check:after, p.services-bullet-cross:after {
+button.services-bullet-check:after, button.services-bullet-cross:after {
+	position: relative;
+	top:5px;
+	margin-left: 10px;
 	font-family: 'Glyphicons Halflings';
   font-size: 20px;
 }

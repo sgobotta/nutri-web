@@ -17,8 +17,12 @@ angular.module('App')
 
 })
 
-.controller('ServicesCtrl', function(){
+.controller('ServicesCtrl', function($scope, $location, $anchorScroll){
 
+  $scope.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+   }
 
 })
 
