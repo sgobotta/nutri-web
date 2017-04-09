@@ -126,17 +126,23 @@ div.header-mnv {
 
 /* SERVICES
  */
-.services-content {
+
+.services-container {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	margin-bottom: -70px;
+}
+.services-list {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-.services-title {
+.services-list-title {
 	position: relative;
 	top:60px;
 	font-weight: bold;
 	font-size: 20px
 }
-.services-items {
+.services-list-items {
 	font-weight: bold;
 	font-size: 16px
 }
@@ -146,13 +152,9 @@ div.header-mnv {
 .services-online-items li {
 	text-align: right;
 }
-.services-items ul {
+.services-list-items ul {
 	list-style: none;
 }
-/*.online-custom-bullet li, .face-to-face-custom-bullet li {
-	display: block;
-}*/
-/**/
 .services-online-items button:after {
 	content:"\e079";
 }
@@ -166,7 +168,6 @@ div.header-mnv {
   margin-right: 7px;
   color: #00FF00;
 }
-
 .services-face-to-face-items button, .services-online-items button {
 	margin-left: -10px;
 	margin-right: -10px;
@@ -175,7 +176,6 @@ div.header-mnv {
 	border: 0px;
 	transition: all ease-in-out 800ms;
 }
-
 #ftf_1:hover > #ftf_1-0, #ftf_2:hover > #ftf_2-0, #ftf_3:hover > #ftf_3-0, 
 #ftf_4:hover > #ftf_4-0, #ftf_5:hover > #ftf_5-0, #ftf_6:hover > #ftf_6-0, 
 #ftf_7:hover > #ftf_7-0, #ftf_8:hover > #ftf_8-0, #ftf_9:hover > #ftf_9-0, 
@@ -183,7 +183,6 @@ div.header-mnv {
 	transform: rotate(-270deg);
 	transition: all ease-in-out 800ms;	
 }
-
 #online_1:hover > #online_1-0, #online_2:hover > #online_2-0, #online_3:hover > #online_3-0, 
 #online_4:hover > #online_4-0, #online_5:hover > #online_5-0, #online_6:hover > #online_6-0, 
 #online_7:hover > #online_7-0, #online_8:hover > #online_8-0, #online_9:hover > #online_9-0, 
@@ -192,9 +191,49 @@ div.header-mnv {
 	transition: all ease-in-out 800ms;
 }
 
+.services-separator {
+	border:1px solid black;
+	border-radius: 10px 10px 10px 10px;
+	margin-top:18px;
+	margin-bottom: 18px
+}
 
-
-
+.services-content {
+	margin-bottom: 70px;
+}
+.services-content-title {
+	font-size: 18px;
+}
+.services-description {
+	padding-left: 30px;
+	font-size: 16px;
+}
+/* Services Icons */
+p.services-ftf-icon:after {
+	content:"\e008";
+}
+p.services-online-icon:after {
+	content:"\e135";
+}
+p.services-ftf-icon, p.services-online-icon {
+	font-family: 'Glyphicons Halflings';
+  font-size: 40px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+/* Services Bullets */
+p.services-bullet-check:after {
+	content:"\e089";
+	color: #00FF00;
+}
+p.services-bullet-cross:after {
+	content:"\e088";
+	color: #FF0000;
+}
+p.services-bullet-check:after, p.services-bullet-cross:after {
+	font-family: 'Glyphicons Halflings';
+  font-size: 20px;
+}
 
 
 
