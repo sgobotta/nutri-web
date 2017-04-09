@@ -30,7 +30,7 @@ div.header-mnv {
 }
 .header-mnv p.name {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 26px;
 }
 .header-mnv p.legend {
 	font-weight: bold;
@@ -110,12 +110,11 @@ div.header-mnv {
 .home-welcome div.home-welcome-text p {
 	font-size: 26px;
 }
-.custom-bullet li {
+.welcome-text-custom-bullet li {
 	font-size: 18px;
   display: block;
 }
-.custom-bullet li:before {
-  /*Using a Bootstrap glyphicon as the bullet point*/
+.welcome-text-custom-bullet li:before {
   content:"\e013";
   font-family: 'Glyphicons Halflings';
   font-size: 18px;
@@ -124,6 +123,82 @@ div.header-mnv {
   margin-right: 4px;
   color: #00FF00;
 }
+
+/* SERVICES
+ */
+.services-content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.services-title {
+	position: relative;
+	top:60px;
+	font-weight: bold;
+	font-size: 20px
+}
+.services-items {
+	font-weight: bold;
+	font-size: 16px
+}
+.services-face-to-face-items li {
+	text-align: left;
+}
+.services-online-items li {
+	text-align: right;
+}
+.services-items ul {
+	list-style: none;
+}
+/*.online-custom-bullet li, .face-to-face-custom-bullet li {
+	display: block;
+}*/
+/**/
+.services-online-items button:after {
+	content:"\e079";
+}
+.services-face-to-face-items button:before {
+	content:"\e080";
+}
+.services-face-to-face-items button:before, .services-online-items button:after {
+	font-family: 'Glyphicons Halflings';
+  font-size: 20px;
+  margin-left: 7px;
+  margin-right: 7px;
+  color: #00FF00;
+}
+
+.services-face-to-face-items button, .services-online-items button {
+	margin-left: -10px;
+	margin-right: -10px;
+	background: rgba(255,255,255,0);
+	color: rgba(255,255,255,0);
+	border: 0px;
+	transition: all ease-in-out 800ms;
+}
+
+#ftf_1:hover > #ftf_1-0, #ftf_2:hover > #ftf_2-0, #ftf_3:hover > #ftf_3-0, 
+#ftf_4:hover > #ftf_4-0, #ftf_5:hover > #ftf_5-0, #ftf_6:hover > #ftf_6-0, 
+#ftf_7:hover > #ftf_7-0, #ftf_8:hover > #ftf_8-0, #ftf_9:hover > #ftf_9-0, 
+#ftf_10:hover > #ftf_10-0 {
+	transform: rotate(-270deg);
+	transition: all ease-in-out 800ms;	
+}
+
+#online_1:hover > #online_1-0, #online_2:hover > #online_2-0, #online_3:hover > #online_3-0, 
+#online_4:hover > #online_4-0, #online_5:hover > #online_5-0, #online_6:hover > #online_6-0, 
+#online_7:hover > #online_7-0, #online_8:hover > #online_8-0, #online_9:hover > #online_9-0, 
+#online_10:hover > #online_10-0 {
+	transform: rotate(270deg);
+	transition: all ease-in-out 800ms;
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -26,6 +26,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/home.html'},
     controller: 'HomeCtrl'
   })
+  .state('outside.services', {
+    url: '/:language/services',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/services.html'},
+    controller: 'ServicesCtrl'
+  })
   .state('outside.login', {
     url: '/login',
     templateUrl: '../templates/login.html',

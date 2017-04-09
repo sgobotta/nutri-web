@@ -3,9 +3,21 @@ angular.module('App')
 
 .controller('WelcomeCtrl', function($scope, $state, $stateParams){
 
+  $scope.enter = function(language){
+    /*$state.params.language = language*/
+    $state.go('outside.home', {
+      language: language
+    })
+  }
+
 })
  
 .controller('HomeCtrl', function(){
+
+
+})
+
+.controller('ServicesCtrl', function(){
 
 
 })
@@ -131,20 +143,24 @@ angular.module('App')
     lang = $scope.userLanguage
   }*/
 
+  $scope.home = function(){
+    $state.go('outside.home', {
+      language: $state.params.language
+    })
+  }
+
+  $scope.services = function(){
+    $state.go('outside.services', {
+      language: $state.params.language
+    })
+  }
+
   $scope.chooseLanguage = function(language){
     $state.params.language = language
     $state.transitionTo($state.current, $state.params, { 
       reload: true, inherit: true, notify: true
     });
   }
-
-  $scope.enter = function(language){
-    /*$state.params.language = language*/
-    $state.go('outside.home', {
-      language: language
-    })
-  }
-
 
   $scope.$on(AUTH_EVENTS.notAuthenticated, function(event) {
     AuthService.logout()
