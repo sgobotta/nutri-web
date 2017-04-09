@@ -13,91 +13,136 @@
 </div>
 
 <div class="services-container">
+
 	<div class="services-list row">
-
-		<div class="col-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 text-center">
-			<div class="services-list-title">
-				<p>Servicios en</p>
-				<p>Consultorio Privado</p>
+		<div class="col-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 left-grid">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 services-list-title text-center">
+				<div class="service-title-box">
+					<div>
+						<a href="">Servicios Online</a>
+					</div>
+					<a href="" class="services-online-glyph"></a>
+				</div>
+			</div>
+			<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				<div>
+					<img class="services-image online-img" src="http://127.0.0.1:8082/static/img/services/online_service.jpg" alt="Servicios Online">
+				</div>
+			</div>
+			<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+				<div class="services-list-items services-left-items">
+					<ul>
+						<li id="left_trigger_1">
+							<button id="left_collider_1" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('alimentary-plan')">Plan Alimentario</a>
+						</li>
+						<li id="left_trigger_2">
+							<button id="left_collider_2" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('assistance')">Asistencia y devoluciones permanentes</a>
+						</li>
+						<li id="left_trigger_3">
+							<button id="left_collider_3" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('courses')">Clases Grabadas y en Vivo</a>
+						</li>
+						<li id="left_trigger_4">
+							<button id="left_collider_4" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('excersice-prescription')">Prescripción de Ejercicio</a>
+						</li>
+						<li id="left_trigger_5">
+							<button id="left_collider_5" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('mobile-app')">Aplicación Móvil</a>
+						</li>
+						<li id="left_trigger_6">
+							<button id="left_collider_6" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('campus')">Campus Virtual</a>
+						</li>
+						<li id="left_trigger_7">
+							<button id="left_collider_7" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('group-interaction')">Compartir e interactuar con otros pacientes</a>
+						</li>
+						<li id="left_trigger_8">
+							<button id="left_collider_8" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('games')">Juegos Interactivos y Actividades Didácticas</a>
+						</li>
+						<li id="left_trigger_9">
+							<button id="left_collider_9" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('techniques')">Técnicas de autoseguimiento</a>
+						</li>
+						<li id="left_trigger_10">
+							<button id="left_collider_10" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('nutrigenomic')">Nutrigenómica</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
-		<div class="col-4 col-sm-8 col-md-4 col-lg-4 col-xl-4">
-			<div class="services-list-items services-face-to-face-items">
-				<ul>
-					<li id="ftf_1"><button id="ftf_1-0" class="bullet-button"></button><a href="">Consulta semanal, quincenal o mensual</a></li>
-					<li id="ftf_2"><button id="ftf_2-0" class="bullet-button"></button><a href="">Bioimpedancia</a></li>
-					<li id="ftf_3"><button id="ftf_3-0" class="bullet-button"></button><a href="">Calorimetría Indirecta</a></li>
-					<li id="ftf_4"><button id="ftf_4-0" class="bullet-button"></button><a href="">Prescripción de Ejercicio</a></li>
-					<li id="ftf_5"><button id="ftf_5-0" class="bullet-button"></button><a href="">Aplicación Móvil</a></li>
-					<li id="ftf_6"><button id="ftf_6-0" class="bullet-button"></button><a href="">Acceso al Campus Virtual</a></li>
-					<li id="ftf_7"><button id="ftf_7-0" class="bullet-button"></button><a href="">Compartir e interactuar con otros pacientes</a></li>
-					<li id="ftf_8"><button id="ftf_8-0" class="bullet-button"></button><a href="">Juegos Interactivos y Actividades Didácticas</a></li>
-					<li id="ftf_9"><button id="ftf_9-0" class="bullet-button"></button><a href="">Consultas temáticas de educación alimentaria</a></li>
-					<li id="ftf_10"><button id="ftf_10-0" class="bullet-button"></button><a href="">Nutrigenómica</a></li>
-				</ul>
+		<div class="col-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 right-grid">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 services-list-title text-center">
+				<div class="service-title-box">
+					<div>
+						<a href="">Consultorio Privado</a>
+					</div>
+					<a href="" class="services-ftf-glyph"></a>
+				</div>
+			</div>			
+			<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+				<div class="services-list-items services-right-items">
+					<ul>
+						<li id="right_trigger_1">
+							<a href="">Consulta semanal, quincenal o mensual</a>
+							<button id="right_collider_1" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_2">
+							<a href="">Bioimpedancia</a>
+							<button id="right_collider_2" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_3">
+							<a href="">Calorimetría Indirecta</a>
+							<button id="right_collider_3" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_4">
+							<a href="">Prescripción de Ejercicio</a>
+							<button id="right_collider_4" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_5">
+							<a href="">Aplicación Móvil</a>
+							<button id="right_collider_5" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_6">
+							<a href="">Acceso al Campus Virtual</a>
+							<button id="right_collider_6" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_7">
+							<a href="">Compartir e interactuar con otros pacientes</a>
+							<button id="right_collider_7" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_8">
+							<a href="">Juegos Interactivos y Actividades Didácticas</a>
+							<button id="right_collider_8" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_9">
+							<a href="">Consultas temáticas de educación alimentaria</a>
+							<button id="right_collider_9" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_10">
+							<a href="" ng-click="scrollTo('nutrigenomic')">Nutrigenómica</a>
+							<button id="right_collider_10" class="bullet-glyphicon"/>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="col-4 col-sm-8 col-md-4 col-lg-4 col-xl-4">
-			<div class="services-list-items services-online-items">
-				<ul>
-					<li id="online_1">
-						<a href="" ng-click="scrollTo('alimentary-plan')">Plan Alimentario</a>
-						<button id="online_1-0" class="bullet-button"/>
-					</li>
-					<li id="online_2">
-						<a href="" ng-click="scrollTo('assistance')">Asistencia y devoluciones permanentes</a>
-						<button id="online_2-0" class="bullet-button"/>
-					</li>
-					<li id="online_3">
-						<a href="" ng-click="scrollTo('courses')">Clases Grabadas y en Vivo</a>
-						<button id="online_3-0" class="bullet-button"/>
-					</li>
-					<li id="online_4">
-						<a href="" ng-click="scrollTo('excersice-prescription')">Prescripción de Ejercicio</a>
-						<button id="online_4-0" class="bullet-button"/>
-					</li>
-					<li id="online_5">
-						<a href="" ng-click="scrollTo('mobile-app')">Aplicación Móvil</a>
-						<button id="online_5-0" class="bullet-button"/>
-					</li>
-					<li id="online_6">
-						<a href="" ng-click="scrollTo('campus')">Campus Virtual</a>
-						<button id="online_6-0" class="bullet-button"/>
-					</li>
-					<li id="online_7">
-						<a href="" ng-click="scrollTo('patient-interaction')">Compartir e interactuar con otros pacientes</a>
-						<button id="online_7-0" class="bullet-button"/>
-					</li>
-					<li id="online_8">
-						<a href="" ng-click="scrollTo('games')">Juegos Interactivos y Actividades Didácticas</a>
-						<button id="online_8-0" class="bullet-button"/>
-					</li>
-					<li id="online_9">
-						<a href="" ng-click="scrollTo('techniques')">Técnicas de autoseguimiento</a>
-						<button id="online_9-0" class="bullet-button"/>
-					</li>
-					<li id="online_10">
-						<a href="" ng-click="scrollTo('nutrigenomic')">Nutrigenómica</a>
-						<button id="online_10-0" class="bullet-button"/>
-					</li>
-				</ul>
-			</div>
-		</div>
 
-		<div class="col-2 col-sm-4 col-md-2 col-lg-2 col-xl-2 text-center">
-			<div class="services-list-title">
-				<p>Servicios</p>
-				<p>Online</p>
+			<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				<div>
+					<img class="services-image" src="http://127.0.0.1:8082/static/img/services/presential_service.jpg" alt="Consultorio Privado">
+				</div>
 			</div>
+
 		</div>
 	</div>
 
 	<div class="services-content">
-		
-		
-		<div id="alimentary-plan" service-alimentary-plan-es></div>
-		
 
 	</div>
 

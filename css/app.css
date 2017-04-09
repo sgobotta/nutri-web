@@ -137,60 +137,68 @@ div.header-mnv {
 	padding-bottom: 20px;
 }
 .services-list-title {
-	position: relative;
-	top:60px;
-	font-weight: bold;
-	font-size: 20px
-}
-.services-list-items {
+	margin-top: 10px;
+	margin-bottom: 18px;
 	font-weight: bold;
 	font-size: 16px
 }
-.services-face-to-face-items li {
+.left-grid div.services-list-title {
+	margin-left: -70px;
+}
+.right-grid div.services-list-title {
+	margin-left: 100px
+}
+.services-list-items {
+	font-weight: bold;
+	font-size: 14px
+}
+.services-left-items li {
 	text-align: left;
 }
-.services-online-items li {
+.services-right-items li {
 	text-align: right;
 }
 .services-list-items ul {
 	list-style: none;
 }
-.services-online-items button:after {
+.services-right-items button:after {
 	content:"\e079";
 }
-.services-face-to-face-items button:before {
+.services-left-items button:before {
 	content:"\e080";
 }
-.services-face-to-face-items button:before, .services-online-items button:after {
+.services-left-items button:before, .services-right-items button:after {
 	font-family: 'Glyphicons Halflings';
-  font-size: 20px;
+  font-size: 14px;
   margin-left: 7px;
   margin-right: 7px;
   color: #00FF00;
 }
-.bullet-button {
+.bullet-glyphicon {
 	margin-left: -10px;
 	margin-right: -10px;
 	background: rgba(255,255,255,0);
 	color: rgba(255,255,255,0);
 	border: 0px;
 }
-.services-face-to-face-items button, .services-online-items button {
+.services-left-items button, .services-right-items button {
 	transition: all ease-in-out 800ms;
 }
-#ftf_1:hover > #ftf_1-0, #ftf_2:hover > #ftf_2-0, #ftf_3:hover > #ftf_3-0, 
-#ftf_4:hover > #ftf_4-0, #ftf_5:hover > #ftf_5-0, #ftf_6:hover > #ftf_6-0, 
-#ftf_7:hover > #ftf_7-0, #ftf_8:hover > #ftf_8-0, #ftf_9:hover > #ftf_9-0, 
-#ftf_10:hover > #ftf_10-0 {
+/* Online Services */
+#left_trigger_1:hover > #left_collider_1, #left_trigger_2:hover > #left_collider_2, #left_trigger_3:hover > #left_collider_3, 
+#left_trigger_4:hover > #left_collider_4, #left_trigger_5:hover > #left_collider_5, #left_trigger_6:hover > #left_collider_6, 
+#left_trigger_7:hover > #left_collider_7, #left_trigger_8:hover > #left_collider_8, #left_trigger_9:hover > #left_collider_9, 
+#left_trigger_10:hover > #left_collider_10 {
 	transform: rotate(-270deg);
-	transition: all ease-in-out 800ms;	
-}
-#online_1:hover > #online_1-0, #online_2:hover > #online_2-0, #online_3:hover > #online_3-0, 
-#online_4:hover > #online_4-0, #online_5:hover > #online_5-0, #online_6:hover > #online_6-0, 
-#online_7:hover > #online_7-0, #online_8:hover > #online_8-0, #online_9:hover > #online_9-0, 
-#online_10:hover > #online_10-0 {
-	transform: rotate(270deg);
 	transition: all ease-in-out 800ms;
+}
+/* Presential Services */
+#right_trigger_1:hover > #right_collider_1, #right_trigger_2:hover > #right_collider_2, #right_trigger_3:hover > #right_collider_3, 
+#right_trigger_4:hover > #right_collider_4, #right_trigger_5:hover > #right_collider_5, #right_trigger_6:hover > #right_collider_6, 
+#right_trigger_7:hover > #right_collider_7, #right_trigger_8:hover > #right_collider_8, #right_trigger_9:hover > #right_collider_9, 
+#right_trigger_10:hover > #right_collider_10 {
+	transform: rotate(270deg);
+	transition: all ease-in-out 800ms;	
 }
 
 .services-separator {
@@ -204,26 +212,28 @@ div.header-mnv {
 	margin-bottom: 70px;
 }
 .services-content-title {
+	font-weight: bold;
 	font-size: 18px;
 }
 .services-description {
 	padding-left: 40px;
 	font-size: 16px;
 }
-/* Services Icons */
-p.services-ftf-icon:after {
-	content:"\e008";
-}
-p.services-online-icon:after {
+/* Services Bullets Online & Presential */
+.services-online-glyph:after {
 	content:"\e135";
 }
-p.services-ftf-icon, p.services-online-icon {
+.services-ftf-glyph:after {
+	content:"\e008";
+}
+.services-online-glyph, .services-ftf-glyph {
 	font-family: 'Glyphicons Halflings';
-  font-size: 40px;
+  font-size: 20px;
+  color: #334185;
   margin-left: 7px;
   margin-right: 7px;
 }
-/* Services Bullets */
+/* Services Bullets Check & Cross*/
 button.services-bullet-check:after {
 	content:"\e089";
 	color: #00FF00;
@@ -239,12 +249,22 @@ button.services-bullet-check:after, button.services-bullet-cross:after {
 	font-family: 'Glyphicons Halflings';
   font-size: 20px;
 }
+.services-image {
+	position: relative;
+	top:50px;
+	width: 150px;
+	height: 150px;
+	border: 2px solid #334185;
+	-moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.online-img {
+	margin-left: 30px;
+}
 
 
-
-
-
-
+/* MISC
+ */
 
 
 /* NO SE USA, ES DEL LOGIN VIEJO, REUTILIZAR O BORRAR */
