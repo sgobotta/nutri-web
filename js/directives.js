@@ -28,7 +28,36 @@ angular.module('App')
 	}
 })
 
-/* SERVICES */
+/************/
+/* SERVICES 
+ */
+
+.directive('servicePeriodicMeasurementsEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/periodic_measurements.html'
+	}
+})
+.directive('servicePeriodicMeasurementsEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/periodic_measurements.html'
+	}
+})
+
+.directive('serviceMotivationEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/motivation.html'
+	}
+})
+.directive('serviceMotivationEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/motivation.html'
+	}
+})
+
 .directive('serviceAlimentaryPlanEs', function(){
 	return {
 		restrict: 'A',
@@ -52,6 +81,45 @@ angular.module('App')
 	return {
 		restrict: 'A',
 		templateUrl: '../templates/en/services/assistance.html'
+	}
+})
+
+.directive('serviceNeurosychicFoodEducationEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/neurosychic_food_education.html'
+	}
+})
+.directive('serviceNeurosychicFoodEducationEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/neurosychic_food_education.html'
+	}
+})
+
+.directive('serviceAnthropometryEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/anthropometry.html'
+	}
+})
+.directive('serviceAnthropometryEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/anthropometry.html'
+	}
+})
+
+.directive('serviceIndirectCalorimetryEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/indirect_calorimetry.html'
+	}
+})
+.directive('serviceIndirectCalorimetryEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/indirect_calorimetry.html'
 	}
 })
 
@@ -120,7 +188,44 @@ angular.module('App')
 	}
 })
 
+.directive('serviceNutrigeneticEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/nutrigenetic.html'
+	}
+})
+.directive('serviceNutrigeneticEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/nutrigenetic.html'
+	}
+})
 
+.directive('serviceSportsAndFitnessEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/sports_and_fitness.html'
+	}
+})
+.directive('serviceSportsAndFitnessEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/sports_and_fitness.html'
+	}
+})
+
+.directive('serviceSupplementationRecommendationEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/supplementation_recommendation.html'
+	}
+})
+.directive('serviceSupplementationRecommendationEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/supplementation_recommendation.html'
+	}
+})
 
 
 .directive('loginTemplate', function(){

@@ -2,7 +2,7 @@
 
 <div>
 	<ul class="nav nav-tabs">
-	  <li role="presentation"><a ng-click="home()">Inicio</a></li>
+	  <li role="presentation"><a href="" ng-click="home()">Inicio</a></li>
 	  <li role="presentation" class="active"><a ng-click="services()">Servicios</a></li>
 	  <li role="presentation"><a href="">Educación Alimentaria</a></li>
 	  <li role="presentation"><a href="">Nutrigenética</a></li>
@@ -34,6 +34,10 @@
 					<ul>
 						<li id="left_trigger_1">
 							<button id="left_collider_1" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('periodic-measurements')">Control, seguimiento y motivación</a>
+						</li>					
+						<li id="left_trigger_1">
+							<button id="left_collider_1" class="bullet-glyphicon"></button>
 							<a href="" ng-click="scrollTo('alimentary-plan')">Plan Alimentario</a>
 						</li>
 						<li id="left_trigger_2">
@@ -42,7 +46,7 @@
 						</li>
 						<li id="left_trigger_3">
 							<button id="left_collider_3" class="bullet-glyphicon"></button>
-							<a href="" ng-click="scrollTo('courses')">Clases Grabadas y en Vivo</a>
+							<a href="" ng-click="scrollTo('neurosychic-education')">Clases Grabadas y en Vivo</a>
 						</li>
 						<li id="left_trigger_4">
 							<button id="left_collider_4" class="bullet-glyphicon"></button>
@@ -50,38 +54,38 @@
 						</li>
 						<li id="left_trigger_5">
 							<button id="left_collider_5" class="bullet-glyphicon"></button>
-							<a href="" ng-click="scrollTo('mobile-app')">Aplicación Móvil</a>
-						</li>
-						<li id="left_trigger_6">
-							<button id="left_collider_6" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('mobile-app')">Aplicación Móvil</a><a> y </a>
 							<a href="" ng-click="scrollTo('campus')">Campus Virtual</a>
 						</li>
 						<li id="left_trigger_7">
 							<button id="left_collider_7" class="bullet-glyphicon"></button>
 							<a href="" ng-click="scrollTo('group-interaction')">Compartir e interactuar con otros pacientes</a>
 						</li>
-						<li id="left_trigger_8">
-							<button id="left_collider_8" class="bullet-glyphicon"></button>
-							<a href="" ng-click="scrollTo('games')">Juegos Interactivos y Actividades Didácticas</a>
-						</li>
-						<li id="left_trigger_9">
-							<button id="left_collider_9" class="bullet-glyphicon"></button>
-							<a href="" ng-click="scrollTo('techniques')">Técnicas de autoseguimiento</a>
+						<li id="left_trigger_7">
+							<button id="left_collider_7" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('art-therapy')">Arteterapia</a>
 						</li>
 						<li id="left_trigger_10">
 							<button id="left_collider_10" class="bullet-glyphicon"></button>
 							<a href="" ng-click="scrollTo('nutrigenomic')">Nutrigenómica</a>
 						</li>
+						<li id="left_trigger_8">
+							<button id="left_collider_8" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('neurosychic-education')">Juegos Interactivos y Actividades Didácticas</a>
+						</li>
+						<li id="left_trigger_9">
+							<button id="left_collider_9" class="bullet-glyphicon"></button>
+							<a href="" ng-click="scrollTo('periodic-measurements')">Técnicas de autoseguimiento</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-
 		<div class="col-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 right-grid">
 			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 services-list-title text-center">
 				<div class="service-title-box">
 					<div>
-						<a href="">Consultorio Privado</a>
+						<a href="">Consultorio Particular</a>
 					</div>
 					<a href="" class="services-ftf-glyph"></a>
 				</div>
@@ -90,73 +94,80 @@
 				<div class="services-list-items services-right-items">
 					<ul>
 						<li id="right_trigger_1">
-							<a href="">Consulta semanal, quincenal o mensual</a>
+							<a href="" ng-click="scrollTo('periodic-measurements')">Control, seguimiento y motivación</a>
 							<button id="right_collider_1" class="bullet-glyphicon"/>
 						</li>
 						<li id="right_trigger_2">
-							<a href="">Bioimpedancia</a>
+							<a href="" ng-click="scrollTo('periodic-measurements')">Bioimpedancia</a>
 							<button id="right_collider_2" class="bullet-glyphicon"/>
 						</li>
+						<li id="right_trigger_1">
+							<a href="" ng-click="scrollTo('anthropometry')">Antropometrías</a>
+							<button id="right_collider_1" class="bullet-glyphicon"/>
+						</li>
 						<li id="right_trigger_3">
-							<a href="">Calorimetría Indirecta</a>
+							<a href="" ng-click="scrollTo('calorimetry')">Calorimetría Indirecta</a>
 							<button id="right_collider_3" class="bullet-glyphicon"/>
 						</li>
 						<li id="right_trigger_4">
-							<a href="">Prescripción de Ejercicio</a>
+							<a href="" ng-click="scrollTo('excersice-prescription')">Prescripción de Ejercicio</a>
 							<button id="right_collider_4" class="bullet-glyphicon"/>
 						</li>
 						<li id="right_trigger_5">
-							<a href="">Aplicación Móvil</a>
+							<a href="" ng-click="scrollTo('mobile-app')">Aplicación Móvil</a><a> y </a>
+							<a href="" ng-click="scrollTo('campus')">Acceso al Campus Virtual</a>
 							<button id="right_collider_5" class="bullet-glyphicon"/>
 						</li>
-						<li id="right_trigger_6">
-							<a href="">Acceso al Campus Virtual</a>
-							<button id="right_collider_6" class="bullet-glyphicon"/>
-						</li>
 						<li id="right_trigger_7">
-							<a href="">Compartir e interactuar con otros pacientes</a>
+							<a href="" ng-click="scrollTo('group-interaction')">Compartir e interactuar con otros pacientes</a>
 							<button id="right_collider_7" class="bullet-glyphicon"/>
 						</li>
-						<li id="right_trigger_8">
-							<a href="">Juegos Interactivos y Actividades Didácticas</a>
-							<button id="right_collider_8" class="bullet-glyphicon"/>
-						</li>
 						<li id="right_trigger_9">
-							<a href="">Consultas temáticas de educación alimentaria</a>
+							<a href="" ng-click="scrollTo('neurosychic-education')">Consultas temáticas de educación alimentaria</a>
 							<button id="right_collider_9" class="bullet-glyphicon"/>
 						</li>
 						<li id="right_trigger_10">
 							<a href="" ng-click="scrollTo('nutrigenomic')">Nutrigenómica</a>
 							<button id="right_collider_10" class="bullet-glyphicon"/>
 						</li>
+						<li id="right_trigger_1">
+							<a href="" ng-click="scrollTo('sports-and-fitness')">Nutrición Deportiva y Fitness</a>
+							<button id="right_collider_1" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_1">
+							<a href="" ng-click="scrollTo('supplementation')">Suplementación</a>
+							<button id="right_collider_1" class="bullet-glyphicon"/>
+						</li>
+						<li id="right_trigger_1">
+							<a href="">Consulta semanal, quincenal o mensual</a>
+							<button id="right_collider_1" class="bullet-glyphicon"/>
+						</li>
 					</ul>
 				</div>
 			</div>
-
 			<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
 				<div>
-					<img class="services-image" src="http://127.0.0.1:8082/static/img/services/presential_service.jpg" alt="Consultorio Privado">
+					<img class="services-image" src="http://127.0.0.1:8082/static/img/services/presential_service.jpg" alt="Consultorio Particular">
 				</div>
 			</div>
-
 		</div>
 	</div>
 
 	<div class="services-content">
-
-		<div id="alimentary-plan" service-alimentary-plan-es></div>
-		<div id="" service-assistance-es></div>
-		<div id="" service-excersice-prescription-es></div>
-		<div id="" service-mobile-app-es></div>
-		<div id="" service-campus-es></div>
-		<div id="" service-group-interaction-es></div>
-		<div id="" service-art-therapy-es></div>
-
+		<div id="periodic-measurements" 	service-periodic-measurements-es></div>
+		<div id="motivation" 							service-motivation-es></div>
+		<div id="alimentary-plan" 				service-alimentary-plan-es></div>
+		<div id="assistance" 							service-assistance-es></div>
+		<div id="neurosychic-education" 	service-neurosychic-food-education-es></div>
+		<div id="anthropometry" 					service-anthropometry-es></div>
+		<div id="calorimetry"							service-indirect-calorimetry-es></div>
+		<div id="excersice-prescription" 	service-excersice-prescription-es></div>
+		<div id="mobile-app" 							service-mobile-app-es></div>
+		<div id="campus" 									service-campus-es></div>
+		<div id="group-interaction" 			service-group-interaction-es></div>
+		<div id="art-therapy" 						service-art-therapy-es></div>
+		<div id="nutrigenomic"						service-nutrigenetic-es></div>
+		<div id="sports-and-fitness"      service-sports-and-fitness-es></div>
+		<div id="supplementation" 				service-supplementation-recommendation-es></div>
 	</div>
-
-
-
-
-
-
 </div>

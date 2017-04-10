@@ -265,6 +265,9 @@ button.services-bullet-check:after, button.services-bullet-cross:after {
 
 /* MISC
  */
+.bold-text {
+	font-weight: bold;
+}
 
 
 /* NO SE USA, ES DEL LOGIN VIEJO, REUTILIZAR O BORRAR */
