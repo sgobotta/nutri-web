@@ -241,3 +241,16 @@ angular.module('App')
 		templateUrl: '../templates/register.html'
 	}
 })
+
+.directive("upArrow", function ($window) {
+    return function(scope, element, attrs) {
+        angular.element($window).bind("scroll", function() {
+             if (this.pageYOffset >= scope.initialHeight) {
+                 scope.isArrowVisible = true;
+             } else {
+                 scope.isArrowVisible = false;
+             }
+            scope.$apply();
+        });
+    };
+});

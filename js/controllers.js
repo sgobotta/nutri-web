@@ -17,12 +17,17 @@ angular.module('App')
 
 })
 
-.controller('ServicesCtrl', function($scope, $location, $anchorScroll){
+.controller('ServicesCtrl', function($scope, $location, $anchorScroll, $window){
+
+  $scope.initialHeight = $window.innerHeight
+
+  $scope.isArrowVisible = false;
 
   $scope.scrollTo = function(id) {
       $location.hash(id);
       $anchorScroll();
    }
+
 
 })
 
