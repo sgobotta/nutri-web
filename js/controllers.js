@@ -1,10 +1,9 @@
 
 angular.module('App')
 
-.controller('WelcomeCtrl', function($scope, $state, $stateParams){
+.controller('WelcomeCtrl', function($scope, $state){
 
   $scope.enter = function(language){
-    /*$state.params.language = language*/
     $state.go('outside.home', {
       language: language
     })
@@ -30,6 +29,51 @@ angular.module('App')
 
 
 })
+
+.controller('AppCtrl', function($rootScope, $scope, $state, $window, AuthService, AUTH_EVENTS) {
+
+  $scope.home = function(){
+    $state.go('outside.home', {
+      language: $state.params.language
+    })
+  }
+
+  $scope.services = function(){
+    $state.go('outside.services', {
+      language: $state.params.language
+    })
+  }
+
+  $scope.chooseLanguage = function(language){
+    $state.params.language = language
+    $state.transitionTo($state.current, $state.params, { 
+      reload: true, inherit: true, notify: true
+    });
+  }
+
+  $scope.$on(AUTH_EVENTS.notAuthenticated, function(event) {
+    AuthService.logout()
+    $state.go('outside.login')
+    alert("Sorry. You have to login again.")
+  });
+
+})
+
+.controller('NavController', function($scope){
+
+  $scope.isDropdownExpanded = false;
+
+  $scope.showMenu = function(){
+    $scope.isDropdownExpanded = true
+  }
+  $scope.hideMenu = function(){
+    $scope.isDropdownExpanded = false
+  }
+
+})
+
+
+
 
 .controller('LoginCtrl', function($scope, AuthService, $state, $stateParams) {
 
@@ -133,61 +177,6 @@ angular.module('App')
   $scope.logout = function() {
     AuthService.logout()
     $state.go('outside.login')
-  }
-
-})
-
-
-.controller('AppCtrl', function($rootScope, $scope, $state, $window, AuthService, AUTH_EVENTS) {
-
-/*  var defaultlang = ($window.navigator.language).slice(0,2)
-*/
-  /* Sets browser language as default
-   */
-/*  if($scope.userLanguage === null){
-    lang = $window.navigator.language || $window.navigator.userLanguage;
-    lang = lang.slice(0,2)
-    $scope.userLanguage = lang
-  } else {
-    lang = $scope.userLanguage
-  }*/
-
-  $scope.home = function(){
-    $state.go('outside.home', {
-      language: $state.params.language
-    })
-  }
-
-  $scope.services = function(){
-    $state.go('outside.services', {
-      language: $state.params.language
-    })
-  }
-
-  $scope.chooseLanguage = function(language){
-    $state.params.language = language
-    $state.transitionTo($state.current, $state.params, { 
-      reload: true, inherit: true, notify: true
-    });
-  }
-
-  $scope.$on(AUTH_EVENTS.notAuthenticated, function(event) {
-    AuthService.logout()
-    $state.go('outside.login')
-    alert("Sorry. You have to login again.")
-  });
-
-})
-
-.controller('NavController', function($scope){
-
-  $scope.isDropdownExpanded = false;
-
-  $scope.showMenu = function(){
-    $scope.isDropdownExpanded = true
-  }
-  $scope.hideMenu = function(){
-    $scope.isDropdownExpanded = false
   }
 
 })
