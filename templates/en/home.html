@@ -1,15 +1,25 @@
 <div class="header-mnv" mnv-header-en></div>
 
-<div>
+<div ng-controller="NavController">
 	<ul class="nav nav-tabs">
-	  <li role="presentation" class="active"><a href="">Home</a></li>
+	  <li role="presentation" class="active"><a href="" ng-click="home()">Home</a></li>
 	  <li role="presentation"><a href="" ng-click="services()">Services</a></li>
-	  <li role="presentation"><a href="">Alimentary Education</a></li>
-	  <li role="presentation"><a href="">Nutrigenetics</a></li>
+		<li role="presentation" class="dropdown" ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
+	    <a href="" role="button" aria-haspopup="true" aria-expanded="false">Food Plans <span class="caret"></span></a>
+	    <ul class="custom-dropdown-menu" aria-labelledby="simple-dropdown" ng-show="isDropdownExpanded">
+      	<li><a href="">Healthy Nutrition</a></li>
+      	<li><a href="">Weight Loss</a></li>
+      	<li><a href="">Fitness</a></li>
+      	<li><a href="">Sports Nutrition</a></li>
+      	<li><a href="">Muscle Nutrition</a></li>
+	    </ul>
+	  </li>	 	  
 	  <li role="presentation"><a href="">Recipes</a></li>
-	  <li role="presentation"><a href="">Who I Am</a></li>
+	  <li role="presentation"><a href="">Courses</a></li>
+	  <li role="presentation"><a href="">Shopping</a></li>
+	  <li role="presentation"><a href="">News &amp; Info</a></li>
 	  <li role="presentation"><a href="">Contact</a></li>
-	</ul>
+	</ul>	
 </div>
 
 <div class="home-content row">

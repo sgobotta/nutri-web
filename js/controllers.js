@@ -178,3 +178,16 @@ angular.module('App')
   });
 
 })
+
+.controller('NavController', function($scope){
+
+  $scope.isDropdownExpanded = false;
+
+  $scope.showMenu = function(){
+    $scope.isDropdownExpanded = true
+  }
+  $scope.hideMenu = function(){
+    $scope.isDropdownExpanded = false
+  }
+
+})

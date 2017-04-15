@@ -1,13 +1,23 @@
 <div class="header-mnv" mnv-header-es></div>
 
-<div>
+<div ng-controller="NavController">
 	<ul class="nav nav-tabs">
-	  <li role="presentation" class="active"><a href="">Inicio</a></li>
+	  <li role="presentation" class="active"><a href="" ng-click="home()">Inicio</a></li>
 	  <li role="presentation"><a href="" ng-click="services()">Servicios</a></li>
-	  <li role="presentation"><a href="">Educación Alimentaria</a></li>
-	  <li role="presentation"><a href="">Nutrigenética</a></li>
+	  <li role="presentation" class="dropdown" ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
+	    <a href="" role="button" aria-haspopup="true" aria-expanded="false">Planes Alimentarios <span class="caret"></span></a>
+	    <ul class="custom-dropdown-menu" aria-labelledby="simple-dropdown" ng-show="isDropdownExpanded">
+      	<li><a href="">Alimentación Saludable</a></li>
+      	<li><a href="">Descenso de Peso</a></li>
+      	<li><a href="">Fitness</a></li>
+      	<li><a href="">Nutrición Deportiva</a></li>
+      	<li><a href="">Musculación</a></li>
+	    </ul>
+	  </li>	  
 	  <li role="presentation"><a href="">Recetas</a></li>
-	  <li role="presentation"><a href="">Quien Soy</a></li>
+	  <li role="presentation"><a href="">Cursos</a></li>
+	  <li role="presentation"><a href="">Compras</a></li>
+	  <li role="presentation"><a href="">Noticias</a></li>
 	  <li role="presentation"><a href="">Contacto</a></li>
 	</ul>
 </div>
