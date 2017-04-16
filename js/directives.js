@@ -242,7 +242,7 @@ angular.module('App')
 	}
 })
 
-.directive("upArrow", function($window) {
+.directive('upArrow', function($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {
              if (this.pageYOffset >= scope.initialHeight) {
@@ -255,7 +255,7 @@ angular.module('App')
     };
 })
 
-.directive("customHeader", function($window){
+.directive('customHeader', function($window){
 	var lang = ($window.navigator.language).slice(0,2)
 	if(lang != 'es' && lang != 'en') {
 		lang = 'en'
@@ -264,4 +264,12 @@ angular.module('App')
 		restrict: 'A',
 		templateUrl: function() { return '../templates/' + lang + '/header.html'}
 	}
+})
+
+.directive('homeCarouselEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/home/carousel.html'
+	}
 });
+

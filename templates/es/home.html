@@ -21,43 +21,133 @@
 	</ul>
 </div>
 
-<div class="home-content row">
+<div class="home-container row">
 
 	<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-		<p>¡Receta del día!</p>
-		<p>por: "usuario del sistema"</p>
-		<div class="daily-recipe">
-			<a href="">
-        <img class="img-responsive" src="http://127.0.0.1:8082/static/img/daily-recipe/dessert.jpg" alt="Daily recipe">
-      </a>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h4 class="panel-title">¡Receta de la semana!</h4>
+		  </div>
+	  	<div class="panel-body">
+		    <div class="thumbnail">
+		      <img src="http://127.0.0.1:8082/static/img/daily-recipe/dessert.jpg" alt="Daily recipe">
+		    </div>
+		  </div>
+		  <div class="panel-footer">
+		  	<p>por:</p>
+		  	<p class="text-center">usuario del sistema</p>
+		  </div>
 		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">Recibe tips, recetas, noticias</h4>
+			</div>
+			<div class="panel-body">
+				<div class="input-group">
+				  <span class="input-group-addon" id="basic-addon1">@</span>
+				  <input type="text" class="form-control" placeholder="e-mail" aria-describedby="basic-addon1">
+				</div>				
+			</div>
+		</div>
+
+		<div class="home-app-buton">
+			<ul class="nav nav-pills nav-stacked text-center">
+			  <li role="presentation"><a role="button" href="">Descarga la App y comenzá ahora!</a></li>
+			</ul>			
+		</div>
+		
 	</div>
 
-	<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-		<div class="home-welcome text-center">
+	<div class="custom-section col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 home-welcome text-center">
 			<p class="home-welcome-title">¡BIENVENIDO!</p>
 			<div class="home-welcome-text">
 				<p>Te invito a construir tu propia versión saludable</p>
-				<p>aprendiendo a comer, ¡y sin prohibiciones!</p>
-				<p>Le enseñaré: </p>
-				<ul class="welcome-text-custom-bullet">
-					<li>combinaciones de alimentos y porciones</li>
-					<li>armarse su propio menú personalizado</li>
-					<li>cómo mejorar situaciones como empleo, comidaa fre (???)</li>
-					<li>leer e incorporar rótulos alimentarios (????)</li>
-				</ul>
 			</div>
+		</div>
+
+		<div class="custom-section col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<div home-carousel-es></div>
+		</div>
+
+		<div class="custom-section col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Ellos ya están en camino</h3>
+			  </div>
+			  <div class="panel-body">
+					<div class="row">
+					  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+					    <div class="thumbnail">
+					      <img src="http://127.0.0.1:8082/static/img/home/user.png" alt="User">
+					    </div>
+					    <div class="user-info text-center">
+					    	<p>Nombre Apellido Usuario</p>
+					    </div>
+					  </div>
+					  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+					    <div class="thumbnail">
+					      <img src="http://127.0.0.1:8082/static/img/home/user.png" alt="User">
+					    </div>
+					    <div class="user-info text-center">
+					    	<p>Nombre Apellido Usuario</p>
+					    </div>
+					  </div>
+					  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+					    <div class="thumbnail">
+					      <img src="http://127.0.0.1:8082/static/img/home/user.png" alt="User">
+					    </div>
+					    <div class="user-info text-center">
+					    	<p>Nombre Apellido Usuario</p>
+					    </div>
+					  </div>
+					</div>
+			  </div>
+			</div>
+		</div>
+
+		<div class="custom-section col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+			<ul class="nav nav-pills nav-justified">
+	  		<li role="presentation"><a href="">Nutrigenética</a></li>
+	  		<li role="presentation"><a href="">Juegos y Actividades Interactivas</a></li>
+	  		<li role="presentation"><a href="">Clases Grabadas y en Vivo</a></li>
+			</ul>
+			<ul class="nav nav-pills nav-justified">
+				<li role="presentation"><a href="">Calorimetría Indirecta (que dice?)</a></li>
+				<li role="presentation"><a href="">Asistencia Online (que dice?)</a></li>
+		  	<li role="presentation"><a href="">Consultas privadas (que dice?)</a></li>
+			</ul>
 		</div>
 	</div>
 
-	<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-		<ul class="nav nav-pills nav-stacked">
-  		<li role="presentation"><a href="">Aplicación Móvil</a></li>
-  		<li role="presentation"><a href="">Clases de Educación Alimentaria</a></li>
-  		<li role="presentation"><a href="">Ejercicio</a></li>
-  		<li role="presentation"><a href="">Juegos y Actividades Interactivas</a></li>
-  		<li role="presentation"><a href="">Consultas privadas</a></li>
-		</ul>
+	<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Quien Soy</h3>
+		  </div>
+		  <div class="panel-body">
+		    <p>Contenido y descripción</p>
+		    <p>Contenido y descripción</p>
+		    <p>Contenido y descripción</p>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Mas cerca tuyo</h3>
+		  </div>
+		  <div class="panel-body">
+		  	<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+		    	<img class="img-responsive" src="http://127.0.0.1:8082/static/img/home/before_picture.jpg" alt="Antes">
+		    </div>
+		    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+		    	<p>Descripción de foto de antes</p>
+		    	<p>Descripción de foto de antes</p>
+		    	<p>Descripción de foto de antes</p>
+		    </div>
+		  </div>
+		</div>
 	</div>
 
 </div>

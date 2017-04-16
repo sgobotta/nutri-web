@@ -155,11 +155,13 @@ div.header-mnv {
 
 /* HOME
  */
-.home-content {
-	padding-top: 20px;
-	padding-bottom: 20px;
+.home-container {
+	padding: 20px 20px 20px 20px;
+	margin-bottom: 60px;
 }
-
+.custom-section {
+	padding: 20px;
+}
 .daily-recipe {
 	border: solid black 1px;
 	padding: 5px 5px 5px 5px;
@@ -167,6 +169,10 @@ div.header-mnv {
 .daily-recipe a img {
 	
 }
+.home-app-buton {
+	
+}
+
 .home-welcome p.home-welcome-title {
 	font-weight: bold;
 	font-size: 36px;
@@ -174,11 +180,11 @@ div.header-mnv {
 .home-welcome div.home-welcome-text p {
 	font-size: 26px;
 }
-.welcome-text-custom-bullet li {
+.home-welcome-text-custom-bullet li {
 	font-size: 18px;
   display: block;
 }
-.welcome-text-custom-bullet li:before {
+.home-welcome-text-custom-bullet li:before {
   content:"\e013";
   font-family: 'Glyphicons Halflings';
   font-size: 18px;
@@ -187,6 +193,60 @@ div.header-mnv {
   margin-right: 4px;
   color: #00FF00;
 }
+.before-img {
+	width: 130px;
+	height: 130px;
+}
+
+
+/* Carousel */
+.home-carousel-container {
+	
+}
+.home-carousel-img {
+	max-height: 200px;
+	max-width: 400px;
+	margin-bottom: 20px;
+	border:1px solid black;
+}
+.carousel-indicators li {
+	background-color: rgba(51,65,133,0);
+  border: 2px solid #000000;
+}
+.carousel-indicators li.active {
+	background-color: rgba(51,65,133,1);
+  border: 2px solid #000000;
+}
+.carousel-control {
+	opacity: 0.9;
+	color: #fff;
+	width: 5%;
+}
+.carousel-control span:before {
+	opacity: 0.5;
+	color: #00FF00;
+	width: 15%;
+}
+.carousel-control span:hover:before {
+	opacity: 1;
+	font-weight: bold;
+}
+a.carousel-control.left, a.carousel-control.right {
+	background-image: linear-gradient(to right,rgba(255,255,255,.0001) 0, rgba(255,255,255,.0001) 100%);
+}
+a.carousel-control.left:hover {
+  /*background-image: -webkit-linear-gradient(left, rgba(51,65,133,0.5) 0,rgba(255,255,255,.0001) 100%);
+  background-image: -o-linear-gradient(left, rgba(51,65,133,0.5) 0,rgba(255,255,255,.0001) 100%);
+  background-image: -webkit-gradient(linear,left top,right top, from(rgba(51,65,133,0.5)),to(rgba(255,255,255,.0001)));
+  background-image: linear-gradient(to right,rgba(51,65,133,0.5) 0, rgba(255,255,255,.0001) 100%);*/
+}
+a.carousel-control.right:hover {
+	/*background-image: -webkit-linear-gradient(left, rgba(255,255,255,.0001) 0, rgba(51,65,133,0.5) 100%);
+  background-image: -o-linear-gradient(left, rgba(255,255,255,.0001) 0, rgba(51,65,133,0.5) 100%);
+  background-image: -webkit-gradient(linear,left top,right top, from(rgba(255,255,255,.0001)),to(rgba(51,65,133,0.5)));
+  background-image: linear-gradient(to right, rgba(255,255,255,.0001) 0, rgba(51,65,133,0.5) 100%);*/
+}
+
 
 /* SERVICES
  */
@@ -354,6 +414,8 @@ div.up-arrow {
 	position: fixed;
 	bottom: 80px;
 	right: 40px;
+	transition: 0.5s ease-in-out all;
+	opacity: 1;
 }
 .up-arrow button:before {
 	color: #334185;
@@ -362,6 +424,34 @@ div.up-arrow {
 .up-arrow button {
 	width: 0px;
 }
+.up-arrow.ng-hide {
+	transition: 0.5s ease-in-out all;
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* NO SE USA, ES DEL LOGIN VIEJO, REUTILIZAR O BORRAR */
@@ -374,10 +464,6 @@ div.up-arrow {
 	bottom:130px;
 	-moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-}
-
-.home-content {
-	padding: 20px 20px 20px 20px;
 }
 
 .home-button-group {

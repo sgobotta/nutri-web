@@ -16,6 +16,15 @@ angular.module('App')
 
 })
 
+.controller('HomeCarousel', function($scope, HOME_SLIDES){
+
+  $scope.myInterval = 2000;
+  $scope.noWrapSlides = false;
+  $scope.active = 0;
+  $scope.slides = HOME_SLIDES.array;
+
+})
+
 .controller('ServicesCtrl', function($scope, $location, $anchorScroll, $window){
 
   $scope.initialHeight = $window.innerHeight

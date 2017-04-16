@@ -1,5 +1,5 @@
 
-var app = angular.module('App', ['ui.router', 'ngAnimate']);
+var app = angular.module('App', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'ui.bootstrap.tpls', 'ngTouch']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
