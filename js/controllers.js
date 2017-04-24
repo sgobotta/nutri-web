@@ -10,7 +10,7 @@ angular.module('App')
   }
 
 })
- 
+
 .controller('HomeCtrl', function(){
 
 
@@ -41,6 +41,36 @@ angular.module('App')
 
 .controller('AppCtrl', function($rootScope, $scope, $state, $window, AuthService, AUTH_EVENTS) {
 
+  $scope.healthyNutritionPlan = function() {
+    $state.go('outside.plan.healthyNutrition', {
+      language: $state.params.language
+    })
+  }
+
+  $scope.weightLossPlan = function() {
+    $state.go('outside.plan.weightLoss', {
+      language: $state.params.language
+    })
+  }
+
+  $scope.muscleWorkoutPlan = function() {
+    $state.go('outside.plan.muscleWorkout', {
+      language: $state.params.language
+    })
+  }
+
+  $scope.fitnessPlan = function() {
+    $state.go('outside.plan.fitness', {
+      language: $state.params.language
+    })
+  }
+
+  $scope.sportsNutrition = function() {
+    $state.go('outside.plan.sportNutrition', {
+      language: $state.params.language
+    })
+  }
+
   $scope.home = function(){
     $state.go('outside.home', {
       language: $state.params.language
@@ -55,7 +85,7 @@ angular.module('App')
 
   $scope.chooseLanguage = function(language){
     $state.params.language = language
-    $state.transitionTo($state.current, $state.params, { 
+    $state.transitionTo($state.current, $state.params, {
       reload: true, inherit: true, notify: true
     });
   }
@@ -90,7 +120,7 @@ angular.module('App')
     email: '',
     password: ''
   }
- 
+
   $scope.login = function() {
     AuthService.login($scope.user).then(function(msg) {
       $state.go('inside');
@@ -100,7 +130,7 @@ angular.module('App')
   }
 
 })
- 
+
 
 .controller('RegisterCtrl', function($scope, AuthService, $state) {
 
@@ -109,7 +139,7 @@ angular.module('App')
     name: '',
     password: ''
   }
- 
+
   $scope.signup = function() {
     console.log("in sign up")
     AuthService.register($scope.user).then(function(msg) {

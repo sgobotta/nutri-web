@@ -31,6 +31,31 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/services.html'},
     controller: 'ServicesCtrl'
   })
+  .state('outside.plan', {
+    url: '/:language/plan',
+    abstract: true,
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan.html'},
+  })
+  .state('outside.plan.healthyNutrition', {
+    url: '/:language/plan/healthy-nutrition',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan/healthy-nutrition.html'},
+  })
+  .state('outside.plan.weightLoss', {
+    url: '/:language/plan/weight-loss',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan/weight-loss.html'},
+  })
+  .state('outside.plan.muscleWorkout', {
+    url: '/:language/plan/muscle-workout',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan/muscle-workout.html'},
+  })
+  .state('outside.plan.fitness', {
+    url: '/:language/plan/fitness',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan/fitness.html'},
+  })
+  .state('outside.plan.sportNutrition', {
+    url: '/:language/plan/sport-nutrition',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan/sport-nutrition.html'},
+  })
   .state('outside.login', {
     url: '/login',
     templateUrl: '../templates/login.html',
@@ -60,7 +85,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
   $urlRouterProvider.otherwise('/outside/es/welcome');
 
 }])
- 
+
 app.run(function($rootScope, $state, AuthService, AUTH_EVENTS) {
   $rootScope.$on('$stateChangeStart', function(event, next, nextParams, fromState) {
     if(!AuthService.isAuthenticated()) {
