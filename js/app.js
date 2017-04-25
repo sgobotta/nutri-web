@@ -26,15 +26,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/home.html'},
     controller: 'HomeCtrl'
   })
-  .state('outside.services', {
-    url: '/:language/services',
-    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/services.html'},
-    controller: 'ServicesCtrl'
-  })
   .state('outside.plan', {
     url: '/:language/plan',
     abstract: true,
     templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan.html'},
+    controller: 'ServicesCtrl'
   })
   .state('outside.plan.healthyNutrition', {
     url: '/:language/plan/healthy-nutrition',

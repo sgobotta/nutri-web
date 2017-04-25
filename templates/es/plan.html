@@ -1,1 +1,21 @@
+<div ng-controller="NavController">
+	<ul class="nav nav-tabs">
+	  <li role="presentation"><a href="" ng-click="home()">Inicio</a></li>
+	  <li role="presentation" class="dropdown active" ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
+	    <a href="" role="button" aria-haspopup="true" aria-expanded="false">Planes Alimentarios <span class="caret"></span></a>
+	    <ul class="custom-dropdown-menu" aria-labelledby="simple-dropdown" ng-show="isDropdownExpanded">
+        <li><a href="" ng-click="healthyNutritionPlan()">Alimentación Saludable</a></li>
+      	<li><a href="" ng-click="weightLossPlan()">Descenso de Peso</a></li>
+				<li><a href="" ng-click="muscleWorkoutPlan()">Musculación</a></li>
+      	<li><a href="" ng-click="fitnessPlan()">Fitness</a></li>
+      	<li><a href="" ng-click="sportsNutrition()">Nutrición Deportiva</a></li>
+	    </ul>
+	  </li>
+	  <li role="presentation"><a href="">Recetas</a></li>
+	  <li role="presentation"><a href="">Cursos</a></li>
+	  <li role="presentation"><a href="">Compras</a></li>
+	  <li role="presentation"><a href="">Noticias</a></li>
+	  <li role="presentation"><a href="">Contacto</a></li>
+	</ul>
+</div>
 <div ui-view ng-view class="view-animate"></div>
