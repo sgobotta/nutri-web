@@ -71,6 +71,19 @@ angular.module('App')
 	}
 })
 
+.directive('serviceMuscleWorkoutAlimentaryPlanEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/muscle_workout_alimentary_plan.html'
+	}
+})
+.directive('serviceMuscleWorkoutAlimentaryPlanEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/muscle_workout_alimentary_plan.html'
+	}
+})
+
 .directive('serviceAssistanceEs', function(){
 	return {
 		restrict: 'A',
@@ -136,6 +149,19 @@ angular.module('App')
 	}
 })
 
+.directive('serviceExcersiceCounselingEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/excersice_counseling.html'
+	}
+})
+.directive('serviceExcersiceCounselingEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/excersice_counseling.html'
+	}
+})
+
 .directive('serviceMobileAppEs', function(){
 	return {
 		restrict: 'A',
@@ -198,6 +224,19 @@ angular.module('App')
 	return {
 		restrict: 'A',
 		templateUrl: '../templates/en/services/nutrigenetic.html'
+	}
+})
+
+.directive('serviceGeneticsAndExcersiceEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/genetics_and_excersice.html'
+	}
+})
+.directive('serviceGeneticsAndExcersiceEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/genetics_and_excersice.html'
 	}
 })
 
