@@ -70,17 +70,40 @@ angular.module('App')
 		templateUrl: '../templates/en/services/alimentary_plan.html'
 	}
 })
-
-.directive('serviceMuscleWorkoutAlimentaryPlanEs', function(){
+.directive('serviceAlimentaryPlanMuscleWorkoutEs', function(){
 	return {
 		restrict: 'A',
-		templateUrl: '../templates/es/services/muscle_workout_alimentary_plan.html'
+		templateUrl: '../templates/es/services/alimentary_plan_muscle_workout.html'
 	}
 })
-.directive('serviceMuscleWorkoutAlimentaryPlanEn', function(){
+.directive('serviceAlimentaryPlanMuscleWorkoutEn', function(){
 	return {
 		restrict: 'A',
-		templateUrl: '../templates/en/services/muscle_workout_alimentary_plan.html'
+		templateUrl: '../templates/en/services/alimentary_plan_muscle_workout.html'
+	}
+})
+.directive('serviceAlimentaryPlanFitnessEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/alimentary_plan_fitness.html'
+	}
+})
+.directive('serviceAlimentaryPlanFitnessEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/alimentary_plan_fitness.html'
+	}
+})
+.directive('serviceAlimentaryPlanSportNutritionEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/alimentary_plan_sport_nutrition.html'
+	}
+})
+.directive('serviceAlimentarySportNutritionEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/alimentary_plan_sport_nutrition.html'
 	}
 })
 
@@ -107,6 +130,42 @@ angular.module('App')
 	return {
 		restrict: 'A',
 		templateUrl: '../templates/en/services/neurosychic_food_education.html'
+	}
+})
+.directive('serviceNeurosychicFoodEducationMuscleWorkoutEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/neurosychic_food_education_muscle_workout.html'
+	}
+})
+.directive('serviceNeurosychicFoodEducationMuscleWorkoutEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/neurosychic_food_education_muscle_workout.html'
+	}
+})
+.directive('serviceNeurosychicFoodEducationFitnessEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/neurosychic_food_education_fitness.html'
+	}
+})
+.directive('serviceNeurosychicFoodEducationFitnessEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/neurosychic_food_education_fitness.html'
+	}
+})
+.directive('serviceNeurosychicFoodEducationSportsNutritionEs', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/es/services/neurosychic_food_education_sports_nutrition.html'
+	}
+})
+.directive('serviceNeurosychicFoodEducationSportsNutritionEn', function(){
+	return {
+		restrict: 'A',
+		templateUrl: '../templates/en/services/neurosychic_food_education_sports_nutrition.html'
 	}
 })
 
@@ -148,17 +207,16 @@ angular.module('App')
 		templateUrl: '../templates/en/services/excersice_prescription.html'
 	}
 })
-
-.directive('serviceExcersiceCounselingEs', function(){
+.directive('serviceExcersiceConsultingEs', function(){
 	return {
 		restrict: 'A',
-		templateUrl: '../templates/es/services/excersice_counseling.html'
+		templateUrl: '../templates/es/services/excersice_consulting.html'
 	}
 })
-.directive('serviceExcersiceCounselingEn', function(){
+.directive('serviceExcersiceConsultingEn', function(){
 	return {
 		restrict: 'A',
-		templateUrl: '../templates/en/services/excersice_counseling.html'
+		templateUrl: '../templates/en/services/excersice_consulting.html'
 	}
 })
 
@@ -226,17 +284,16 @@ angular.module('App')
 		templateUrl: '../templates/en/services/nutrigenetic.html'
 	}
 })
-
-.directive('serviceGeneticsAndExcersiceEs', function(){
+.directive('serviceExcersiceAndNutritionGeneticsEs', function(){
 	return {
 		restrict: 'A',
-		templateUrl: '../templates/es/services/genetics_and_excersice.html'
+		templateUrl: '../templates/es/services/excersice_and_nutrition_genetics.html'
 	}
 })
-.directive('serviceGeneticsAndExcersiceEn', function(){
+.directive('serviceExcersiceAndNutritionGeneticsEn', function(){
 	return {
 		restrict: 'A',
-		templateUrl: '../templates/en/services/genetics_and_excersice.html'
+		templateUrl: '../templates/en/services/excersice_and_nutrition_genetics.html'
 	}
 })
 
