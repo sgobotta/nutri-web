@@ -1,0 +1,48 @@
+
+<div class="app-nav-bar" ng-controller="NavController">
+	<ul class="nav nav-tabs">
+	  <li role="presentation"><a href="" ng-click="home()">Inicio</a></li>
+	  <li role="presentation" class="dropdown" ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
+	    <a href="" role="button" aria-haspopup="true" aria-expanded="false">Planes Alimentarios <span class="caret"></span></a>
+	    <ul class="custom-dropdown-menu" aria-labelledby="simple-dropdown" ng-show="isDropdownExpanded">
+      	<li><a href="" ng-click="healthyNutritionPlan()">Alimentación Saludable</a></li>
+      	<li><a href="" ng-click="weightLossPlan()">Descenso de Peso</a></li>
+				<li><a href="" ng-click="muscleWorkoutPlan()">Musculación</a></li>
+      	<li><a href="" ng-click="fitnessPlan()">Fitness</a></li>
+      	<li><a href="" ng-click="sportsNutrition()">Nutrición Deportiva</a></li>
+	    </ul>
+	  </li>
+	  <li role="presentation"><a href="">Recetas</a></li>
+	  <li role="presentation"><a href="">Cursos</a></li>
+	  <li role="presentation" class="active"><a href="">Compras</a></li>
+	  <li role="presentation"><a href="">Noticias</a></li>
+	  <li role="presentation"><a href="">Contacto</a></li>
+	</ul>
+</div>
+
+<div class="shop-container container-fluid row">
+	
+	<div ng-repeat="item in shopItems">
+		<div class="shop-panel col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h4 class="panel-title">{{item.title}}</h4>
+			  </div>
+		  	<div class="panel-body">
+			    <div class="shop-image thumbnail">
+			      <img ng-src="{{item.url}}" alt="{{item.title}}">
+			    </div>
+			  </div>
+			  <div class="shop-panel-footer panel-footer">
+			  	<ul>
+			  		<div ng-repeat="content in item.content">
+			  			<li>{{content}}</li>
+			  		</div>
+			  	</ul>
+			  	<p>{{item.promo}}</p>
+			  </div>
+			</div>		
+		</div>
+	</div>
+
+</div>

@@ -30,7 +30,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     url: '/:language/plan',
     abstract: true,
     templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan.html'},
-    controller: 'ServicesCtrl'
+    controller: 'PlanCtrl'
   })
   .state('outside.plan.healthyNutrition', {
     url: '/:language/plan/healthy-nutrition',
@@ -52,6 +52,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     url: '/:language/plan/sport-nutrition',
     templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/plan/sport-nutrition.html'},
   })
+  .state('outside.shop', {
+    url: '/:language/shop',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/shop.html'},
+    controller: 'ShopCtrl'
+  })
+
+
+
+
   .state('outside.login', {
     url: '/login',
     templateUrl: '../templates/login.html',

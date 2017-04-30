@@ -11,35 +11,6 @@ angular.module('App')
 
 })
 
-.controller('HomeCtrl', function(){
-
-
-})
-
-.controller('HomeCarousel', function($scope, HOME_SLIDES){
-
-  $scope.myInterval = 2000;
-  $scope.noWrapSlides = false;
-  $scope.active = 0;
-  $scope.slides = HOME_SLIDES.array;
-
-})
-
-.controller('ServicesCtrl', function($scope, $location, $anchorScroll, $window){
-
-  $scope.initialHeight = $window.innerHeight
-
-  $scope.isArrowVisible = false;
-
-  $scope.scrollTo = function(id) {
-      $location.hash(id);
-      $anchorScroll();
-   }
-
-  $scope.scrollTo('top')
-
-})
-
 .controller('AppCtrl', function($rootScope, $scope, $state, $window, AuthService, AUTH_EVENTS) {
 
   $scope.healthyNutritionPlan = function() {
@@ -78,8 +49,8 @@ angular.module('App')
     })
   }
 
-  $scope.services = function(){
-    $state.go('outside.services', {
+  $scope.shop = function(){
+    $state.go('outside.shop', {
       language: $state.params.language
     })
   }
@@ -109,6 +80,41 @@ angular.module('App')
   $scope.hideMenu = function(){
     $scope.isDropdownExpanded = false
   }
+
+})
+
+.controller('HomeCtrl', function(){
+
+
+})
+
+.controller('HomeCarousel', function($scope, HOME_SLIDES){
+
+  $scope.myInterval = 2000;
+  $scope.noWrapSlides = false;
+  $scope.active = 0;
+  $scope.slides = HOME_SLIDES.array;
+
+})
+
+.controller('PlanCtrl', function($scope, $location, $anchorScroll, $window){
+
+  $scope.initialHeight = $window.innerHeight
+
+  $scope.isArrowVisible = false;
+
+  $scope.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+   }
+
+  $scope.scrollTo('top')
+
+})
+
+.controller('ShopCtrl', function($scope, SHOP_ITEMS){
+
+  $scope.shopItems = SHOP_ITEMS.array;
 
 })
 
