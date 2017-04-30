@@ -36,6 +36,7 @@ angular.module('App')
       $anchorScroll();
    }
 
+  $scope.scrollTo('top')
 
 })
 
