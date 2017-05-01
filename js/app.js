@@ -57,7 +57,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/shop.html'},
     controller: 'ShopCtrl'
   })
-
+  .state('outside.contact', {
+    url: '/:language/contact',
+    templateUrl: function(stateParams) { return '../templates/' + stateParams.language + '/contact.html'},
+    controller: 'ContactCtrl'
+  })
 
 
 

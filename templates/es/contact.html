@@ -1,0 +1,75 @@
+
+<div class="app-nav-bar" ng-controller="NavController">
+	<ul class="nav nav-tabs">
+	  <li role="presentation"><a href="" ng-click="home()">Inicio</a></li>
+	  <li role="presentation" ng-mouseover="showMenu()" ng-mouseleave="hideMenu()">
+	    <a href="" role="button" aria-haspopup="true" aria-expanded="false">Planes Alimentarios <span class="caret"></span></a>
+	    <ul class="custom-dropdown-menu" aria-labelledby="simple-dropdown" ng-show="isDropdownExpanded">
+        <li><a href="" ng-click="healthyNutritionPlan()">Alimentación Saludable</a></li>
+      	<li><a href="" ng-click="weightLossPlan()">Descenso de Peso</a></li>
+				<li><a href="" ng-click="muscleWorkoutPlan()">Musculación</a></li>
+      	<li><a href="" ng-click="fitnessPlan()">Fitness</a></li>
+      	<li><a href="" ng-click="sportsNutrition()">Nutrición Deportiva</a></li>
+	    </ul>
+	  </li>
+	  <li role="presentation"><a href="">Recetas</a></li>
+	  <li role="presentation"><a href="">Cursos</a></li>
+	  <li role="presentation"><a href="" ng-click="shop()">Compras</a></li>
+	  <li role="presentation"><a href="">Noticias</a></li>
+	  <li role="presentation" class="dropdown active"><a href="">Contacto</a></li>
+	</ul>
+</div>
+
+<div class="contact-content container">
+	<div class="jumbotron">
+	  <h3>Asistencia Online</h3>
+	  <p>email : mar.vazquez@hotmail.com</p>
+	  <p><a class="btn btn-primary btn-lg" href="" role="button">Acceso a Campus Virtual</a></p>
+	</div>
+
+	<div class="custom-section col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Consultorios privados</h3>
+		  </div>
+		  <div class="panel-body">
+				<div class="row">
+				  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				  	<p>Nuñez</p>
+				    <div class="thumbnail">
+				      <img src="http://127.0.0.1:8082/static/img/home/user.png" alt="User">
+				    </div>
+				    <div>
+				    	<p class="phone">9999-9999</p>
+				    	<p class="location">Av. del Libertador</p>
+				    	<p class="info">Pedir turnos NO SE QUE</p>
+				    </div>
+				  </div>
+				  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				  	<p>Adrogue</p>
+				    <div class="thumbnail">
+				      <img src="http://127.0.0.1:8082/static/img/home/user.png" alt="User">
+				    </div>
+				    <div>
+				    	<p class="phone">9999-9999</p>
+				    	<p class="location">Av. la Rosa 703</p>
+				    </div>
+				  </div>
+				  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+				  	<p>Palermo</p>
+				    <div class="thumbnail">
+				      <img src="http://127.0.0.1:8082/static/img/home/user.png" alt="User">
+				    </div>
+				    <div>
+				    	<p class="phone">9999-9999</p>
+				    	<p class="location">Av. Córdoba 5779</p>
+				    	<p class="info">Pedir turnos NO SE QUE</p>
+				    </div>
+				  </div>
+				</div>
+		  </div>
+		</div>
+	</div>
+
+
+</div>

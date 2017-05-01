@@ -203,9 +203,6 @@ div.header-mnv {
 .daily-recipe a img {
 
 }
-.home-app-buton {
-
-}
 
 .home-welcome p.home-welcome-title {
 	font-weight: bold;
@@ -455,6 +452,16 @@ button.services-bullet-check:after, button.services-bullet-cross:after {
 	height: 300px
 }
 
+/* CONTACT
+ */
+.contact-content {
+	position: relative;
+	top:30px;
+	margin-bottom: 70px;
+}
+.contact-content div.jumbotron {
+	width: 75%
+}
 
 /* MISC
  */
@@ -481,7 +488,9 @@ div.up-arrow {
 	transition: 0.5s ease-in-out all;
 	opacity: 0;
 }
+.single-app-buton {
 
+}
 
 
 

@@ -55,6 +55,12 @@ angular.module('App')
     })
   }
 
+  $scope.contact = function(){
+    $state.go('outside.contact', {
+      language: $state.params.language
+    })
+  }
+
   $scope.chooseLanguage = function(language){
     $state.params.language = language
     $state.transitionTo($state.current, $state.params, {
@@ -118,6 +124,10 @@ angular.module('App')
 
 })
 
+.controller('ContactCtrl', function(){
+
+
+})
 
 
 
